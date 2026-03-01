@@ -1,0 +1,17 @@
+<nav class="navbar">
+    <a href="{{ url_for('index') }}" class="logo">🦁 EcoEye AI</a>
+    
+    <div class="nav-links">
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('features') }}">Features</a>
+        <a href="{{ url_for('about') }}">About</a>
+        
+        {% if current_user.is_authenticated %}
+            <a href="{{ url_for('dashboard') }}" class="btn-signup">Dashboard</a>
+            <a href="{{ url_for('logout') }}" class="btn-login">Logout</a>
+        {% else %}
+            <a href="{{ url_for('login') }}" class="btn-login">Login</a>
+            <a href="{{ url_for('signup') }}" class="btn-signup">Sign Up</a>
+        {% endif %}
+    </div>
+</nav>

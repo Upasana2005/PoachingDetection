@@ -1,0 +1,39 @@
+{% extends "layout/base.html" %}
+
+{% block title %}Login - EcoEye AI{% endblock %}
+
+{% block content %}
+<div class="auth-container">
+    <div class="auth-card">
+        <div class="auth-header">
+            <h2>Welcome Back</h2>
+            <p>Login to access your dashboard</p>
+        </div>
+        
+        <form method="POST" action="{{ url_for('login') }}">
+            <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" name="email" placeholder="Enter your email" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" name="password" placeholder="Enter your password" required>
+            </div>
+            
+            <div class="form-options">
+                <label class="remember-me">
+                    <input type="checkbox" name="remember"> Remember me
+                </label>
+                <a href="{{ url_for('forgot_password') }}" class="forgot-link">Forgot Password?</a>
+            </div>
+            
+            <button type="submit" class="btn-auth">Login</button>
+        </form>
+        
+        <div class="auth-footer">
+            Don't have an account? <a href="{{ url_for('signup') }}">Sign up here</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

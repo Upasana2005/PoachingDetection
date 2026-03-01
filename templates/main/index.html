@@ -1,0 +1,103 @@
+{% extends "layout/base.html" %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Protect Wildlife with<br>AI-Powered Intelligence</h1>
+        <p>Real-time poaching detection using advanced computer vision. Monitor protected areas, receive instant alerts, and respond faster to save endangered species.</p>
+        <div class="hero-buttons">
+            <a href="{{ url_for('signup') }}" class="btn-primary">Start Free Trial</a>
+            <a href="{{ url_for('features') }}" class="btn-secondary">Learn More</a>
+        </div>
+    </div>
+    <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1549366021-9f761d450615?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Wildlife Protection" style="width: 100%; max-width: 500px; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.3);">
+    </div>
+</section>
+
+<!-- How It Works Section -->
+<section style="padding: 80px 5%; background: rgba(22, 71, 106, 0.2);">
+    <div class="section-title">
+        <h2>How EcoEye AI Works</h2>
+        <p>Advanced technology protecting our wildlife</p>
+    </div>
+    
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; max-width: 1200px; margin: 0 auto;">
+        <div style="text-align: center;">
+            <div style="font-size: 4rem; color: #E17564; margin-bottom: 20px;">📹</div>
+            <h3 style="color: white; margin-bottom: 15px;">1. Upload Drone Footage</h3>
+            <p style="color: #9CD5FF;">Connect your drones or CCTV cameras to stream live footage to our platform.</p>
+        </div>
+        
+        <div style="text-align: center;">
+            <div style="font-size: 4rem; color: #7AAACE; margin-bottom: 20px;">🤖</div>
+            <h3 style="color: white; margin-bottom: 15px;">2. AI Detects Threats</h3>
+            <p style="color: #9CD5FF;">Our YOLOv8 model analyzes each frame to identify poachers, weapons, and animals in real-time.</p>
+        </div>
+        
+        <div style="text-align: center;">
+            <div style="font-size: 4rem; color: #BE3144; margin-bottom: 20px;">🚨</div>
+            <h3 style="color: white; margin-bottom: 15px;">3. Instant Alerts</h3>
+            <p style="color: #9CD5FF;">Immediate notifications sent to forest rangers with images and GPS coordinates.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="features">
+    <div class="section-title">
+        <h2>Why Choose EcoEye AI?</h2>
+        <p>Built by conservationists, powered by AI</p>
+    </div>
+    
+    <div class="features-grid">
+        <div class="feature-card">
+            <div class="feature-icon">🎯</div>
+            <h3>99.8% Accuracy</h3>
+            <p>Trained on 50,000+ images of wildlife, poachers, and rangers in various conditions.</p>
+        </div>
+        
+        <div class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <h3>Real-Time Detection</h3>
+            <p>Processes 30+ frames per second - catches poachers as they appear.</p>
+        </div>
+        
+        <div class="feature-card">
+            <div class="feature-icon">📱</div>
+            <h3>Multi-Platform Alerts</h3>
+            <p>Email, SMS, and mobile app notifications when threats are detected.</p>
+        </div>
+        
+        <div class="feature-card">
+            <div class="feature-icon">🌙</div>
+            <h3>Night Vision Support</h3>
+            <p>Works with thermal and night vision cameras for 24/7 protection.</p>
+        </div>
+        
+        <div class="feature-card">
+            <div class="feature-icon">🗺️</div>
+            <h3>GPS Integration</h3>
+            <p>Automatic location tagging for quick response coordination.</p>
+        </div>
+        
+        <div class="feature-card">
+            <div class="feature-icon">📊</div>
+            <h3>Analytics Dashboard</h3>
+            <p>Track poaching patterns, high-risk areas, and response times.</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- CTA Section -->
+<section class="cta">
+    <h2>Ready to Protect Wildlife?</h2>
+    <p>Join leading conservation organizations using EcoEye AI.</p>
+    <div class="cta-buttons">
+        <a href="{{ url_for('signup') }}" class="btn-primary">Get Started</a>
+        <a href="{{ url_for('features') }}" class="btn-secondary">View Features</a>
+    </div>
+</section>
+{% endblock %}
